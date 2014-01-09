@@ -1,9 +1,13 @@
 # Book Controller
 class BooksController < ApplicationController
+  before_do: 
+
   def new
+    @book = Book.new
   end
   
   def index
+    @book = Book.all
   end
 
   def create

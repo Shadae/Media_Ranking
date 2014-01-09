@@ -3,8 +3,16 @@ MediaRanker::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-  resources :books, :music, :movies
+  root 'welcome#index'
+
+  get '/movies' => 'movies#index', as: :movies
+  get '/books' => 'books#index', as: :books
+  get '/songs' => 'songs#index', as: :songs
+
+
+
+
+  resources :books, :songs, :movies
   
 
   # Example of regular route:
